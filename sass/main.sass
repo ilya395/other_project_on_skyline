@@ -1,0 +1,361 @@
+*
+	box-sizing: border-box
+
+@font-face
+	font-family: Oswald
+	src: url(../fonts/Oswald/Oswald-Light.ttf)
+	font-weight: normal
+@font-face
+	font-family: Oswald
+	src: url(../fonts/Oswald/Oswald-Bold.ttf)
+	font-weight: bold
+
+@font-face
+	font-family: 'Montserrat Alternates', sans-serif
+	src: url(../fonts/Montserrat_Alternates/MontserratAlternates-Medium.ttf)
+	font-weight: normal
+@font-face
+	font-family: 'Montserrat Alternates', sans-serif
+	src: url(../fonts/Montserrat_Alternates/MontserratAlternates-Bold.ttf)
+	font-weight: bold
+
+@font-face
+	font-family: IBMPlexSans
+	src: url(../fonts/IBMPlexSans/IBMPlexSans-Regular.ttf)
+	font-weight: normal
+@font-face
+	font-family: IBMPlexSans
+	src: url(../fonts/IBMPlexSans/IBMPlexSans-SemiBold.ttf)
+	font-weight: 600
+
+body
+	font-size: 14px
+	color: #32323c
+
+.other-project__section
+	width: 100%
+	background-color: #ffffff
+	overflow: hidden
+
+.other-projects__container
+	margin: 0 auto
+	position: relative
+.project-slaider
+	width: 100%
+.project-slaider__container
+	margin-left: -15px
+	margin-right: -15px
+.project-slaider__container-title
+	font-family: IBMPlexSans
+	font-size: 20px * 2
+	font-weight: 600
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.5
+	letter-spacing: normal
+	text-align: center
+	color: #000000
+	margin:
+		top: 25px
+		bottom: 41px
+.project-slaider__container-slaids
+	width: 100%
+	height: 100%
+	overflow: hidden
+	//padding-left: -15px
+	//padding-right: -15px
+.project-slaider__slaid
+	box-sizing: border-box
+.project-slaider__slaids-row
+	display: flex
+	flex-wrap: nowrap
+	width: 100%
+	// margin-left: -15px
+	//margin-right: -15px
+	box-sizing: border-box
+	transition: transform 0.6s ease
+.project-slaider__slaid
+	flex-basis: 33.33333%
+	max-width: 33.33333%
+	flex-grow: 0
+	flex-shrink: 0
+	padding-right: 15px
+	padding-left: 15px
+	box-sizing: border-box
+	margin-top: 50px
+	margin-bottom: 50px
+.project-slaider__slaid-wrap
+	height: auto
+	width: 100%
+	overflow: hidden
+	background-color: transparent
+	border: solid 1px transparent
+	transition: border 0.6s ease
+	box-sizing: border-box
+	&:hover
+		border: solid 1px #4bcbdb
+	&:focus
+		border: solid 1px #4bcbdb
+.project-slaider__slaid-link
+	text-decoration: none
+	display: flex
+	flex-direction: column-reverse
+	width: 100%
+	height: 100%
+	box-sizing: border-box
+.project-slaider__slaid-title
+	flex-basis: auto
+	position: relative
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	background-color: transparent
+	transition: background-color 0.6s ease
+	box-sizing: border-box
+.slaid-title__text
+	font-family: IBMPlexSans
+	font-size: 12px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 2.5
+	letter-spacing: normal
+	color: #000000
+	position: relative
+	display: block
+	transition: color 0.6s ease
+	margin-left: 10.5px
+.slaid-title__dop-text, .slaid-title__post-text
+	font-family: IBMPlexSans
+	font-size: 6px * 2
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.25
+	letter-spacing: normal
+	color: #5a6678
+	margin:
+		top: 0px
+		bottom: 7px
+		left: 10.5px
+.slaid-title__dop-text
+	display: block
+.slaid-title__post-text
+	display: none
+	color: #54cddc
+	opacity: 0
+	transition: opacity 0.6s ease
+.project-slaider__slaid-wrap
+	&:hover
+		.slaid-title__dop-text
+			display: none
+		.slaid-title__post-text
+			display: block
+			opacity: 1
+	&:focus
+		.slaid-title__dop-text
+			display: none
+		.slaid-title__post-text
+			display: block
+			opacity: 1
+.project-slaider__slaid-img
+	flex-basis: auto //119px * 2
+	display: flex
+	flex-direction: row-reverse
+	overflow: hidden
+	box-sizing: border-box
+.project-slaider__slaid-image
+	height: auto
+	width: 100%
+	//margin-right: 0px
+	//margin-left: auto
+	box-sizing: border-box
+
+.project-slaider__controls
+	position: relative
+	width: 100%
+.project-slaider__arrows
+	position: absolute
+	width: 100%
+.project-slaider__arrow-item
+	//background: url(../img/arrow.png) 0 0 no-repeat
+	position: absolute
+	top: -205px
+	bottom: 0
+	width: 24px
+	height: 42px
+	//background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000)
+	transition: background-color 0.6s ease
+.project-slaider__arrow-item.on-left
+	&:after
+		content: ""
+		background-image: url(../img/arrow_left.png)
+		background-repeat: no-repeat
+		position: absolute
+		width: 24px
+		height: 42px
+		transition: background-color 0.6s ease
+		cursor: pointer
+	&:hover
+		&:after
+			background-color: rgba(255, 255, 255, 0.38)
+	&:focus
+		&:after
+			background-color: rgba(255, 255, 255, 0.38)
+	//left: -60px
+.project-slaider__arrow-item.on-right
+	//right: -60px
+	&:after
+		content: ""
+		background-image: url(../img/arrow_right.png)
+		background-repeat: no-repeat
+		position: absolute
+		width: 24px
+		height: 42px
+		cursor: pointer
+		transition: background-color 0.6s ease
+	&:hover
+		&:after
+			background-color: rgba(255, 255, 255, 0.38)
+	&:focus
+		&:after
+			background-color: rgba(255, 255, 255, 0.38)
+.slider__control_show
+	display: flex
+
+.project-slaider__dots
+	position: absolute
+	width: 100%
+	display: flex
+	justify-content: center
+	top: -30px
+.project-slaider__dot-item
+	display: inline-block
+	background: rgba(255, 255, 255, 0.38)
+	width: 11px
+	height: 11px
+	border-radius: 50%
+	border: 2px solid transparent
+	margin: 0 4px
+.project-slaider__dot-item.active
+	border-color: rgba(255, 255, 255, 0.38)
+	background: transparent
+/*
+ * @media
+ */
+@media (max-width: 576px)
+	.project-slaider__container-title
+		font-size: 20px * 2
+	.slaid-title__text
+		font-size: 12px * 2
+	.slaid-title__dop-text
+		font-size: 6px * 2
+	.other-projects__container
+		width: calc(100% - 55px)
+	.project-slaider__slaid
+		flex-basis: 50%
+		max-width: 50%
+		flex-grow: 0
+		flex-shrink: 0
+		padding-right: 5px
+		padding-left: 5px
+	.project-slaider__arrow-item
+		width: 24px
+	.project-slaider__arrow-item.on-left
+		left: -30px
+		&:after
+			//line-height: 1
+			//font-size: 20px
+			//top: calc(50% - 20px)
+			//padding: 6px 10px 12px 10px
+	.project-slaider__arrow-item.on-right
+		right: -30px
+		&:after
+			//line-height: 1
+			//font-size: 20px
+			//top: calc(50% - 20px)
+			//padding: 8px 10px 10px 10px
+@media (min-width: 576px)
+	.project-slaider__container-title
+		font-size: 20px * 2
+	.slaid-title__text
+		font-size: 12px * 2
+	.slaid-title__dop-text
+		font-size: 6px * 2
+	.other-projects__container
+		width: 500px
+	.project-slaider__slaid
+		flex-basis: 50%
+		max-width: 50%
+		flex-grow: 0
+		flex-shrink: 0
+		padding-right: 15px
+		padding-left: 15px
+	.project-slaider__arrow-item
+		width: 24px
+	.project-slaider__arrow-item.on-left
+		left: -30px
+		&:after
+			//line-height: 1
+			//font-size: 30px
+			//top: calc(50% - 25px)
+			//padding: 6px 10px 14px 10px
+	.project-slaider__arrow-item.on-right
+		right: -30px
+		&:after
+			//line-height: 1
+			//font-size: 30px
+			//top: calc(50% - 25px)
+			//padding: 8px 10px 12px 10px
+@media (min-width: 768px)
+	.other-projects__container
+		width: 700px
+	.project-slaider__slaid
+		flex-basis: 33.33333%
+		max-width: 33.33333%
+		flex-grow: 0
+		flex-shrink: 0
+	.project-slaider__arrow-item.on-left
+		left: -30px
+	.project-slaider__arrow-item.on-right
+		right: -30px
+@media (min-width: 992px)
+	.other-projects__container
+		width: 920px
+	.project-slaider__slaid
+		flex-basis: 25%
+		max-width: 25%
+		flex-grow: 0
+		flex-shrink: 0
+	.project-slaider__arrow-item.on-left
+		left: -30px
+	.project-slaider__arrow-item.on-right
+		right: -30px
+@media (min-width: 1200px)
+	.other-projects__container
+		width: 960px
+	.project-slaider__slaid
+		flex-basis: 33.33333%
+		max-width: 33.33333%
+		flex-grow: 0
+		flex-shrink: 0
+	.project-slaider__arrow-item.on-left
+		left: -30px
+	.project-slaider__arrow-item.on-right
+		right: -30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
