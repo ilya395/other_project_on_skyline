@@ -57,7 +57,7 @@ body
 	color: #000000
 	margin:
 		top: 25px
-		bottom: 41px
+		//bottom: 20.5px
 .project-slaider__container-slaids
 	width: 100%
 	height: 100%
@@ -89,13 +89,21 @@ body
 	width: 100%
 	overflow: hidden
 	background-color: transparent
-	border: solid 1px transparent
-	transition: border 0.6s ease
 	box-sizing: border-box
 	&:hover
-		border: solid 1px #4bcbdb
+		.project-slaider__slaid-title
+			border:
+				left: solid 1px #4bcbdb
+				right: solid 1px #4bcbdb
+				bottom: solid 1px #4bcbdb
+				top: 0
 	&:focus
-		border: solid 1px #4bcbdb
+		.project-slaider__slaid-title
+			border:
+				left: solid 1px #4bcbdb
+				right: solid 1px #4bcbdb
+				bottom: solid 1px #4bcbdb
+				top: 0
 .project-slaider__slaid-link
 	text-decoration: none
 	display: flex
@@ -110,8 +118,13 @@ body
 	flex-direction: column
 	align-items: flex-start
 	background-color: transparent
-	transition: background-color 0.6s ease
 	box-sizing: border-box
+	border:
+		left: solid 1px transparent
+		right: solid 1px transparent
+		bottom: solid 1px transparent
+		top: 0
+	transition: border 0.6s ease
 .slaid-title__text
 	font-family: IBMPlexSans
 	font-size: 12px * 2
@@ -136,7 +149,7 @@ body
 	color: #5a6678
 	margin:
 		top: 0px
-		bottom: 7px
+		bottom: 13px
 		left: 10.5px
 .slaid-title__dop-text
 	display: block
@@ -159,7 +172,7 @@ body
 			display: block
 			opacity: 1
 .project-slaider__slaid-img
-	flex-basis: auto //119px * 2
+	flex-basis: auto
 	display: flex
 	flex-direction: row-reverse
 	overflow: hidden
@@ -178,13 +191,11 @@ body
 	position: absolute
 	width: 100%
 .project-slaider__arrow-item
-	//background: url(../img/arrow.png) 0 0 no-repeat
 	position: absolute
-	top: -205px
+	top: -255px
 	bottom: 0
 	width: 24px
 	height: 42px
-	//background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #000000)
 	transition: background-color 0.6s ease
 .project-slaider__arrow-item.on-left
 	&:after
@@ -231,51 +242,49 @@ body
 	top: -30px
 .project-slaider__dot-item
 	display: inline-block
-	background: rgba(255, 255, 255, 0.38)
+	background: rgba(90, 102, 120, 0.38)
 	width: 11px
 	height: 11px
 	border-radius: 50%
 	border: 2px solid transparent
 	margin: 0 4px
 .project-slaider__dot-item.active
-	border-color: rgba(255, 255, 255, 0.38)
+	border-color: rgba(90, 102, 120, 0.38)
 	background: transparent
 /*
  * @media
  */
 @media (max-width: 576px)
+	.project-slaider__container
+		margin-left: 0px
+		margin-right: 0px
 	.project-slaider__container-title
-		font-size: 20px * 2
+		font-size: 13px * 2
+		line-height: 1.23
+		font-weight: bold
 	.slaid-title__text
 		font-size: 12px * 2
 	.slaid-title__dop-text
 		font-size: 6px * 2
 	.other-projects__container
-		width: calc(100% - 55px)
+		width: 85vw
 	.project-slaider__slaid
-		flex-basis: 50%
-		max-width: 50%
+		flex-basis: 100%
+		max-width: 100%
 		flex-grow: 0
 		flex-shrink: 0
-		padding-right: 5px
-		padding-left: 5px
+		padding-right: 15px
+		padding-left: 15px
 	.project-slaider__arrow-item
 		width: 24px
 	.project-slaider__arrow-item.on-left
 		left: -30px
-		&:after
-			//line-height: 1
-			//font-size: 20px
-			//top: calc(50% - 20px)
-			//padding: 6px 10px 12px 10px
 	.project-slaider__arrow-item.on-right
 		right: -30px
-		&:after
-			//line-height: 1
-			//font-size: 20px
-			//top: calc(50% - 20px)
-			//padding: 8px 10px 10px 10px
 @media (min-width: 576px)
+	.project-slaider__container
+		margin-left: -7.5px
+		margin-right: -7.5px
 	.project-slaider__container-title
 		font-size: 20px * 2
 	.slaid-title__text
@@ -289,42 +298,37 @@ body
 		max-width: 50%
 		flex-grow: 0
 		flex-shrink: 0
-		padding-right: 15px
-		padding-left: 15px
+		padding-right: 7.5px
+		padding-left: 7.5px
 	.project-slaider__arrow-item
 		width: 24px
 	.project-slaider__arrow-item.on-left
 		left: -30px
-		&:after
-			//line-height: 1
-			//font-size: 30px
-			//top: calc(50% - 25px)
-			//padding: 6px 10px 14px 10px
 	.project-slaider__arrow-item.on-right
 		right: -30px
-		&:after
-			//line-height: 1
-			//font-size: 30px
-			//top: calc(50% - 25px)
-			//padding: 8px 10px 12px 10px
 @media (min-width: 768px)
+	.project-slaider__container
+		margin-left: -15px
+		margin-right: -15px
 	.other-projects__container
-		width: 700px
+		width: 680px
 	.project-slaider__slaid
-		flex-basis: 33.33333%
-		max-width: 33.33333%
+		flex-basis: 50%
+		max-width: 50%
 		flex-grow: 0
 		flex-shrink: 0
+		padding-right: 15px
+		padding-left: 15px
 	.project-slaider__arrow-item.on-left
 		left: -30px
 	.project-slaider__arrow-item.on-right
 		right: -30px
 @media (min-width: 992px)
 	.other-projects__container
-		width: 920px
+		width: 900px
 	.project-slaider__slaid
-		flex-basis: 25%
-		max-width: 25%
+		flex-basis: 33.33333%
+		max-width: 33.33333%
 		flex-grow: 0
 		flex-shrink: 0
 	.project-slaider__arrow-item.on-left

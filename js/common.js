@@ -21,15 +21,6 @@ var multiItemSlider = (function () {
       _items = [], // массив элементов
 
       _sliderControlDots = _mainElement.querySelectorAll('.project-slaider__dot-item'); // массив кнопочек
-      
-      console.log(_sliderWrapper);
-      console.log(_sliderItems.length);
-      console.log(_sliderControls.length);
-      console.log(_sliderControlLeft);
-      console.log(_sliderControlRight);
-      console.log(_wrapperWidth);
-      console.log(_itemWidth);
-      console.log(_sliderControlDots.length);
 
     // наполнение массива _items
     _sliderItems.forEach(function (item, index) {
